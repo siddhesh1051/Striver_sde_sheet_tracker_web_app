@@ -7,15 +7,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // Enable CORS for localhost client
-app.use(cors(
-
-    {
-        origin: ['https://sde-sheet.vercel.app/'],
-        methods: ['GET', 'POST', 'OPTIONS'],
-
-        
-    }
-    ));
+app.use(cors());
 
 
 // Define routes
