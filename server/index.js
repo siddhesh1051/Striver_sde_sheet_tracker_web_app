@@ -10,7 +10,9 @@ const cors = require('cors');
 app.use(cors(
 
     {
-        origin: 'https://sde-sheet.vercel.app/'
+        origin: ['https://sde-sheet.vercel.app/'],
+        methods: ['GET', 'POST', 'OPTIONS'],
+
         
     }
     ));
