@@ -16,7 +16,7 @@ export default function App() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/topic/sde');
+                const response = await axios.get('https://striver-sde-sheet-api.onrender.com/api/topic/sde');
                 setData(response.data.data);
             } catch (error) {
                 console.error("Error fetching data: ", error);
