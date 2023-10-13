@@ -17,24 +17,32 @@ const Links = ({ question }) => {
             }
 
 
-            {   
+            {
                 question?.p1_link &&
                 <a href={question?.p1_link} target='_blank' style={{ display: 'inline-block', backgroundColor: '#402A05', borderRadius: '10px', padding: '8px' }}>
                     <img src={CodingNinjaLogo} width={30} height={30} alt="" />
                 </a>
             }
-            {   
+            {
                 question?.yt_link &&
                 <a href={question?.yt_link} target='_blank' style={{ display: 'inline-block', backgroundColor: '#441613', borderRadius: '10px', padding: '8px' }}>
-                <img src={YoutubeLogo} width={30} height={30} alt="" />
-            </a>
+                    <img src={YoutubeLogo} width={30} height={30} alt="" />
+                </a>
             }
-            {   
-                question?.post_link &&
-                <a href={question?.post_link} target='_blank' style={{ display: 'inline-block', backgroundColor: '#082B40', borderRadius: '10px', padding: '8px' }}>
-                <img src={WebsiteLogo} width={30} height={30} alt="" />
-            </a>
+            {
+                question?.post_link && (
+                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+                        <iframe
+                            title="Embedded Video"
+                            src={question?.post_link}
+                            frameBorder="0"
+                            allowFullScreen
+                            style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+                        />
+                    </div>
+                )
             }
+
         </div>
     )
 }
